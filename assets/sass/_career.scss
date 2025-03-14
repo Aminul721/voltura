@@ -1,0 +1,18 @@
+.circular-section {
+    --circular-size: 50px;
+    @include media-breakpoint-down(md) { --circular-size: 40px; }
+}
+.circular-wrap {
+    & + .circular-wrap { margin-top: 4rem; }
+}
+.job-circular-icon {
+    width: var(--circular-size);
+    min-width: var(--circular-size);
+    height: var(--circular-size);
+    background-color: var(--#{$prefix}white);
+}
+.job-circular-title {
+    --gap-min: var(--circular-size);
+    width: calc(calc(100% - var(--gap-min)) / 1);
+    padding-left: 1.5rem;
+}

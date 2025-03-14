@@ -1,0 +1,45 @@
+// special-feature-section css
+.full-width-slider { margin-right: calc(-1 * var(--margin-right));}
+.special-feature-slider {
+    --swiper-btn-size: 56px;
+    padding-bottom: calc(var(--swiper-btn-size) + 40px);
+    @include media-breakpoint-down(lg) {
+        --swiper-btn-size: 42px;
+        padding-bottom: calc(var(--swiper-btn-size) + 25px);
+    }
+}
+.special-feature-title {
+    @include media-breakpoint-up(lg) { max-width: 72rem; }
+}
+
+// special-feature-section2 css
+.special-feature-slider2 {
+    --swiper-btn-size: 56px;
+    padding-bottom: calc(var(--swiper-btn-size) + 40px);
+    @include media-breakpoint-down(lg) {
+        --swiper-btn-size: 42px;
+        padding-bottom: calc(var(--swiper-btn-size) + 25px);
+    }
+}
+
+.custom-swiper-btn-wrap {
+    --swiper-btn-size: 56px;
+    --swiper-btn-bg: #E0E4E9;
+    --swiper-btn-color:#65717E;
+    --fa-secondary-opacity: 1;
+    margin-right: calc(var(--margin-right));
+    padding-right: 15px;
+    @include media-breakpoint-down(lg) {
+        --swiper-btn-size: 46px;
+    }
+}
+.custom-btn-prev,
+.custom-btn-next {
+    width: var(--swiper-btn-size);
+    height: var(--swiper-btn-size);
+    border-radius: 50%;
+    background-color: var(--swiper-btn-bg);
+    color: var(--swiper-btn-color);
+    transition: all 0.3s ease-in-out;
+    &:hover { background-color: var(--#{$prefix}primary); color: var(--#{$prefix}white);}
+}

@@ -1,0 +1,9 @@
+// connect-stay css
+.connect-stay-wrapper {
+    height: 75.3rem;
+    @include media-breakpoint-down(xl) { height: 62.2rem;}
+    @include media-breakpoint-down(md) { height: 48.6rem;}
+}
+.bg-connect-stay {
+    --voltura-bg: url('../images/backgrounds/connect-stay-bg.jpg');
+}

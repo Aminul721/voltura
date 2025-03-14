@@ -1,0 +1,9 @@
+.hero-feature-icon {
+    color: var(--#{$prefix}primary);
+}
+.hero-title {
+    font-size: calc(2.625rem + 8.5vw);
+    @include media-breakpoint-up(xl) {
+        font-size: 15rem;
+    }
+}

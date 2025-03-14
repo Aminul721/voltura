@@ -1,0 +1,11 @@
+// blog-section css
+.blog-slider {
+    --swiper-btn-size: 56px;
+    --swiper-btn-bg: #E0E4E9;
+    --swiper-btn-color:#65717E;
+    padding-bottom: calc(var(--swiper-btn-size) + 40px);
+    @include media-breakpoint-down(lg) {
+        --swiper-btn-size: 42px;
+        padding-bottom: calc(var(--swiper-btn-size) + 28px);
+    }
+}

@@ -1,0 +1,16 @@
+$utilities: map-merge(
+    $utilities,
+    (
+        "shadow": (
+            property: box-shadow,
+            state: hover,
+            class: shadow,
+            values: (
+                null: var(--#{$prefix}box-shadow),
+                sm: var(--#{$prefix}box-shadow-sm),
+                lg: var(--#{$prefix}box-shadow-lg),
+                none: none,
+            )
+        ),
+    )
+);

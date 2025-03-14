@@ -1,0 +1,13 @@
+.category-search-modal {
+    --bs-modal-width: calc(100% - 30px);
+    --bs-modal-header-border-color: transparent;
+    --bs-modal-padding: 2rem;
+    --bs-modal-header-padding: 1.2rem 2rem;
+    .modal-content { min-height: calc(100vh - 100px); }
+}
+.search-icon {
+    background-color: transparent;
+    font-size: 2.6rem;
+    padding-top: 4px;
+    @include media-breakpoint-down(lg) { font-size: 2rem; }
+}

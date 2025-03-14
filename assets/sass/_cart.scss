@@ -1,0 +1,32 @@
+// table css
+.table-content-wrap {
+    --#{$prefix}table-border-color: var(--bs-border-color);
+    margin-bottom: 0;
+    & thead {
+        & > tr {
+            & > th { padding: 1rem; }
+        }
+    }
+    & tbody {
+        & > tr {
+            & > td { padding: 2rem 1rem; }
+        }
+    }
+}
+.cart-qty {
+    width: 86px;
+    height: 42px;
+}
+.total-bill-cost-item {
+    & + .total-bill-cost-item { margin-top: 1.5rem; }
+}
+
+// wishlist css
+.btn-wishlist {
+    --wishlist-size: 35px;
+    width: var(--wishlist-size);
+    height: var(--wishlist-size);
+    padding: 0;
+    right: 15px;
+    top: 15px;
+}

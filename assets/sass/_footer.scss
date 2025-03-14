@@ -1,0 +1,40 @@
+// footer css
+.footer-bg-img {
+    --voltura-bg: url('../images/backgrounds/footer-bg.png');
+    --voltura-repeat: no-repeat;
+    --voltura-size: 76% auto;
+    --voltura-position: right bottom 3rem;
+    --voltura-opacity: initial;
+}
+.footer-menu-item {
+    li {
+        & + li {
+            margin-top: 1.2rem;
+            @include media-breakpoint-down(lg){ margin-top: 0.5rem; }
+        }
+    }
+}
+.social-link-wrap {
+    li {
+        a {
+            svg { transition: all 0.15s ease-in-out;}
+            &:hover {
+                svg { transform: scale(1.1); }
+            }
+        }
+    }
+}
+.select-lang {
+    cursor: pointer; 
+    width: 72px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.select-others-lang { 
+    display: none;
+    background-color: var(--bg-color, #F5F5F7);
+    padding: 0.5rem;
+    border-radius: 0.6rem 0.6rem 0 0;
+    li { cursor: pointer; }
+}

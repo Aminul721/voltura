@@ -1,0 +1,26 @@
+.login-wrapper {
+    --bg-img: url('../images/products/headphones-side1.jpg');
+    --bg-img-repeat: no-repeat;
+    --bg-img-size: cover;
+    --bg-img-position: center center;
+    --bg-img-opacity: initial;
+    background-image: var(--bg-img);
+    background-repeat: var(--bg-img-repeat);
+    background-size: var(--bg-img-size);
+    background-position: var(--bg-img-position);
+}
+.icon-google { width: 22px; }
+.separator-line {
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0 15px 0 0;
+        flex: 1 0 20px;
+    }
+    &::after { margin: 0 0 0 15px; }
+}
+.btn-google {
+    border-color: rgba(var(--#{$prefix}body-color-rgb), 0.1);
+}

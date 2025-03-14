@@ -1,0 +1,47 @@
+.product-details-col {
+    &:not(:last-child) {
+        padding-bottom: 36.5px;
+        border-bottom: 1px solid var(--#{$prefix}border-color);
+        @include media-breakpoint-down(xl) { padding-bottom: 25.5px; }
+        @include media-breakpoint-down(lg) { padding-bottom: 20.5px; }
+    }
+    & + .product-details-col {
+        margin-top: 36.5px;
+        @include media-breakpoint-down(xl) { margin-top: 25.5px; }
+        @include media-breakpoint-down(lg) { margin-top: 20.5px; }
+    }
+}
+.choose-color-box {
+    gap: 3rem;
+    @include media-breakpoint-down(xl) { gap: 1.5rem;}
+}
+.choose-color {
+    width: calc(calc(100% / 3) - 3rem);
+    @include media-breakpoint-down(xl) { width: calc(calc(100% / 3) - 1.5rem);}
+}
+.choose-size {
+    cursor: pointer;
+}
+.choose-item {
+    --item-size: 50px;
+    width: var(--item-size);
+    height: var(--item-size);
+}
+.select-color { height: 50%; }
+.silver-color {
+    background-color: var(--#{$prefix}silver-color, #B0B5BB);
+}
+.aluminum-color {
+    background-color: var(--#{$prefix}aluminum-color, #000);
+}
+.gold-color {
+    background-color: var(--#{$prefix}gold-color, #F1C49C);
+}
+.black-color {
+    background-color: var(--#{$prefix}black-color, #2F353D);
+}
+.qty-input2 {
+    background-color: transparent;
+    &:is(:focus, :focus-visible, :active) { background-color: transparent; }
+}
+.border-active-color { cursor: pointer; }

@@ -1,0 +1,15 @@
+// camera products css
+.tabs-parent{ transition: all 0.5s ease-in-out; }
+.tab-item {
+    cursor: pointer;
+    color: var(--#{$prefix}gray);
+    transition: transform 0.5s ease-in-out;
+    &.active {
+        color: var(--#{$prefix}headings-color);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+.tab-content {
+    display: none;
+    &.show-content { display: block; }
+}

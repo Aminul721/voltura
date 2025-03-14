@@ -1,0 +1,15 @@
+// photo-gallery css
+.photo-gallery-img {
+    img { transition: all 0.25s ease-in-out; }
+    &:hover { img { transform: scale(1.02) rotate(-0.8deg);} }
+}
+.photo-circle {
+    &.watch-feature-circle {
+        top: 43%;
+        right: 47.5%;
+        @include media-breakpoint-down(xxl) {
+            top: 35px;
+            right: 6px;
+        }
+    }
+}

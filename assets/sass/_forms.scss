@@ -1,0 +1,36 @@
+//---------Form css---------
+.form-style {
+    --#{$prefix}form-border-color: var(--#{$prefix}border-color);
+    --#{$prefix}form-input-padding-y: 0.85rem;
+    --#{$prefix}form-input-padding-x: 1.2rem;
+    --#{$prefix}border-radius: 0.6rem;
+    --#{$prefix}input-focus-box-shadow: none;
+}
+.form-control {
+    padding: var(--#{$prefix}form-input-padding-y) var(--#{$prefix}form-input-padding-x);
+    color: rgba(var(--#{$prefix}body-color-rgb), 1);
+
+    &:is(:focus, :focus-visible) { box-shadow: var(--#{$prefix}input-focus-box-shadow); }
+}
+.form-control::-webkit-outer-spin-button,
+.form-control::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.form-control[type=number] { -moz-appearance:textfield; }
+.form-control::placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-control::-webkit-input-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-control::-moz-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-control:-ms-input-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-control:-moz-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-select {
+    padding: var(--#{$prefix}form-input-padding-y) var(--#{$prefix}form-input-padding-x);
+    color: rgba(var(--#{$prefix}body-color-rgb), 0.5);
+
+    &:is(:focus, :focus-visible) { box-shadow: var(--#{$prefix}input-focus-box-shadow); }
+}
+.form-select::placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-select::-webkit-input-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-select::-moz-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-select:-ms-input-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }
+.form-select:-moz-placeholder { color: rgba(var(--#{$prefix}body-color-rgb), 0.5); }

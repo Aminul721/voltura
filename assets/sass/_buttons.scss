@@ -1,0 +1,111 @@
+// === buttons css
+.btn {
+    --#{$prefix}btn-padding-x: 4.85rem;
+    --#{$prefix}btn-padding-y: 1.4rem;
+    --#{$prefix}btn-font-family: "Plus Jakarta Sans", serif;
+    --#{$prefix}btn-font-weight: 700;
+    --#{$prefix}btn-line-height: 1.2;
+    --#{$prefix}btn-border-width: 0.2rem;
+    --#{$prefix}btn-border-radius: 1rem;
+
+    --#{$prefix}btn-hover-border-color: transparent;
+    --#{$prefix}btn-box-shadow: none;
+    --#{$prefix}btn-focus-box-shadow: none;
+
+    @include media-breakpoint-down(md) {
+        --#{$prefix}btn-padding-x: 2.85rem;
+        --#{$prefix}btn-padding-y: 1.2rem;
+    }
+}
+.btn-link-icon {
+    --#{$prefix}btn-padding-x: 0rem;
+    --#{$prefix}btn-padding-y: 0rem;
+    --#{$prefix}btn-border-width: 0rem;
+    --fa-secondary-opacity: 1;
+    --#{$prefix}btn-font-weight: 500;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-bg: transparent;
+    color: var(--#{$prefix}body-color);
+    .fa-angle-right { font-size: 1.4rem; padding-left: 0.5rem; transition: transform 0.3s ease-in-out; }
+    &:hover {
+        .fa-angle-right {
+            transform: translateX(4px);
+        }
+    }
+}
+
+.btn-lg {
+    --bs-btn-font-size: 1.8rem;
+    --#{$prefix}btn-padding-x: 3.5rem;
+    --#{$prefix}btn-padding-y: 1.5rem;
+    @include media-breakpoint-down(md) {
+        --#{$prefix}btn-padding-x: 2.5rem;
+        --#{$prefix}btn-padding-y: 1.2rem;
+    }
+}
+
+.btn-md {
+    --#{$prefix}btn-padding-x: 2.85rem;
+    --#{$prefix}btn-padding-y: 1.2rem;
+}
+.btn-sm {
+    --#{$prefix}btn-padding-x: 1.85rem;
+    --#{$prefix}btn-padding-y: 1.1rem;
+}
+
+.btn-primary {
+    --#{$prefix}btn-color: #1279F2;
+    --#{$prefix}btn-bg: #1279F2;
+    --#{$prefix}btn-border-width: 0.2rem;
+    --#{$prefix}btn-border-color: #1279F2;
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: #0a67d3;
+    --#{$prefix}btn-active-bg: #0a67d3;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-active-color: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-border-color: #0a67d3;
+    --#{$prefix}btn-active-border-color: #0a67d3;
+}
+
+.btn-outline-primary {
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-hover-bg: transparent;
+    --#{$prefix}btn-active-bg: transparent;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-active-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}body-color);
+}
+
+.btn-secondary {
+    --#{$prefix}btn-bg: var(--#{$prefix}body-color);
+    --#{$prefix}btn-color: var(--#{$prefix}white);
+    --#{$prefix}btn-border-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-hover-bg: #07080a;
+    --#{$prefix}btn-active-bg: #07080a;
+    --#{$prefix}btn-hover-border-color: #07080a;
+    --#{$prefix}btn-active-border-color: #07080a;
+}
+
+.btn-outline-secondary {
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-border-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-bg: transparent;
+    --#{$prefix}btn-active-bg: transparent;
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);
+}
+.card-cart-btn {
+    --#{$prefix}btn-font-size: 1.6rem;
+    --#{$prefix}btn-font-weight: 500;
+    --#{$prefix}btn-bg: var(--#{$prefix}white);
+    --#{$prefix}btn-hover-bg: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}white);
+    --#{$prefix}btn-border-radius: 3rem;
+    --#{$prefix}btn-padding-x: 1.4rem;
+    --#{$prefix}btn-padding-y: 1.4rem;
+}

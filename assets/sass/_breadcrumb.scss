@@ -1,0 +1,15 @@
+// breadcrumb css
+.breadcrumb {
+    --#{$prefix}breadcrumb-font-size: 1.8rem;
+    --#{$prefix}breadcrumb-bg: none;
+    --#{$prefix}breadcrumb-border-radius: 0;
+}
+.breadcrumb-item {
+    --#{$prefix}breadcrumb-icon: url('data:image/svg+xml;utf8,%3Csvg%20width%3D%228%22%20height%3D%2214%22%20viewBox%3D%220%200%208%2014%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M0.292893%200.292893C-0.0976315%200.683417%20-0.0976315%201.31658%200.292893%201.70711L5.58579%207L0.292893%2012.2929C-0.0976315%2012.6834%20-0.0976315%2013.3166%200.292893%2013.7071C0.683417%2014.0976%201.31658%2014.0976%201.70711%2013.7071L7.70711%207.70711C8.09763%207.31658%208.09763%206.68342%207.70711%206.29289L1.70711%200.292893C1.31658%20-0.0976311%200.683417%20-0.0976311%200.292893%200.292893Z%22%20fill%3D%22white%22/%3E%3C/svg%3E');
+    & > a { text-decoration: none; }
+    &.breadcrumb-item:not(:first-child)::before {
+        content: "/";
+        position: relative;
+        top: 0;
+    }
+}

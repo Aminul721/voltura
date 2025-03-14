@@ -1,0 +1,100 @@
+/*
+Template Name: voltura
+Template URI: https://themeperch.net/
+Author: Themeperch
+Author URI: https://themeforest.net/user/themeperch
+Description: voltura is a modern HTML Template...
+Version: 1.0.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+-------------------------------------------------------------------*/
+
+/*----------core bootstrap css----------*/
+@import "../scss/mixins/banner";
+@include bsBanner("");
+
+// custom css
+@import "custom";
+// scss-docs-start import-stack
+// Configuration
+@import "../scss/functions";
+@import "../scss/variables";
+@import "../scss/variables-dark";
+@import "../scss/maps";
+@import "../scss/mixins";
+@import "../scss/utilities";
+
+// custom utilities css
+@import "custom-utilities";
+
+// Layout & components
+@import "../scss/root";
+@import "../scss/reboot";
+@import "../scss/type";
+@import "../scss/images";
+@import "../scss/containers";
+@import "../scss/grid";
+@import "../scss/tables";
+@import "../scss/forms";
+@import "../scss/buttons";
+@import "../scss/transitions";
+@import "../scss/dropdown";
+@import "../scss/button-group";
+@import "../scss/nav";
+@import "../scss/navbar";
+@import "../scss/card";
+@import "../scss/accordion";
+@import "../scss/breadcrumb";
+@import "../scss/pagination";
+@import "../scss/badge";
+@import "../scss/alert";
+@import "../scss/progress";
+@import "../scss/list-group";
+@import "../scss/close";
+@import "../scss/toasts";
+@import "../scss/modal";
+@import "../scss/tooltip";
+@import "../scss/popover";
+@import "../scss/carousel";
+@import "../scss/spinners";
+@import "../scss/offcanvas";
+@import "../scss/placeholders";
+// Helpers
+@import "../scss/helpers";
+
+// Utilities
+@import "../scss/utilities/api";
+
+//======== start custom main css ========//
+/*-----------partials scss fils-----------*/
+@import "global";
+@import "buttons";
+@import "forms";
+@import "header";
+@import "hero";
+@import "card";
+@import "breadcrumb";
+@import "wireless-stereo";
+@import "photo-gallery";
+@import "camera-products";
+@import "electronics-shop";
+@import "watch-feature";
+@import "buy-product";
+@import "special-feature";
+@import "review";
+@import "blog";
+@import "product-single";
+@import "connect-stay";
+@import "big-battery";
+@import "login";
+@import "offcanvas";
+@import "modal";
+@import "career";
+@import "cart";
+@import "contact";
+
+@import "footer";
+
+// scss-docs-end import-stack
