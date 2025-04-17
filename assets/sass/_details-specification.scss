@@ -1,0 +1,35 @@
+// details-specification css 
+.sticky-element {
+    transition: all 0.5s ease-in-out;
+    position: sticky;
+    z-index: 7;
+}
+
+.table-wrapper {
+    & + .table-wrapper {
+        margin-top: 5rem;
+        @include media-breakpoint-down(lg) { margin-top: 3.5rem; }
+    }
+}
+.table-wrapper-responsive {
+    @include media-breakpoint-down(sm){
+        overflow-x: auto;
+    }
+}
+.table-custom {
+    --#{$prefix}table-cell-padding-y:        2rem;
+    --#{$prefix}table-cell-padding-x:        0;
+    --#{$prefix}table-cell-padding-y-sm:     1.2rem;
+    --#{$prefix}table-cell-padding-x-sm:     0;
+    --#{$prefix}table-color:                 var(--#{$prefix}body-color);
+    margin-bottom: 0;
+    &  > :not(caption) > * > * {
+        padding: 2rem 0;
+        @include media-breakpoint-down(sm){ padding: 1rem 0; }
+    }
+    @include media-breakpoint-down(sm){
+        width: 555px;
+    }
+}
+.tech-name { width: 44%; }
+.tech-desc { width: 66%; }

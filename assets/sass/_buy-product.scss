@@ -1,7 +1,5 @@
 // buy-product-section css
-.actions-wrap-mxw {
-    max-width: 390px;
-}
+.actions-wrap-mxw { max-width: 390px; }
 .qty-btn {
     outline-style: none;
     width: 12px;
@@ -15,4 +13,102 @@
 .qty-input {
     &:is(:active, :focus, :focus-visible) { box-shadow: none; }
     -moz-appearance: textfield;
+}
+
+// product-grid css
+.product-grid-select-wrap {
+    padding: 0.4rem;
+    gap: 0.4rem;
+}
+.grid-select-button {
+    --select-button-size: 42px;
+    width: var(--select-button-size);
+    height: var(--select-button-size);
+    border-color: transparent;
+    &.active {
+        border-color: var(--#{$prefix}border-color);
+        background-color: var(--#{$prefix}light);
+        box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
+    }
+}
+.filter-form-style {
+    --#{$prefix}form-input-padding-y: 0;
+    --#{$prefix}form-input-padding-x: 0;
+    --#{$prefix}input-font-size: 2rem;
+    --#{$prefix}form-select-indicator-padding: 0;
+    --#{$prefix}form-select-font-weight: 500;
+    --#{$prefix}input-color: var(--#{$prefix}body-color);
+}
+.form-custom-select {
+    font-size: var(--#{$prefix}input-font-size);
+    color: var(--#{$prefix}input-color);
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+    option {
+        font-size: 1.4rem;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+.best-selling-select { 
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+    width: 150px;
+    min-width: 150px;
+}
+.product-container-default {
+    transition: all 0.3s ease-in-out;
+    & > .col-product {
+        transition: all 0.3s ease-in-out;
+        @include media-breakpoint-up(sm){ width: calc(calc(100% - 0rem) / 2); }
+        @include media-breakpoint-up(lg){ width: calc(calc(100% - 0rem) / 3); }
+        @include media-breakpoint-up(xl){ width: calc(calc(100% - 0rem) / 4); }
+    }
+}
+
+.grid-four-col {
+    & > .col-product {
+        @include media-breakpoint-up(sm){ width: calc(calc(100% - 0rem) / 2); }
+        @include media-breakpoint-up(lg){ width: calc(calc(100% - 0rem) / 3); }
+        @include media-breakpoint-up(xl){ width: calc(calc(100% - 0rem) / 4); }
+    }
+}
+.grid-five-col {
+    & > .col-product {
+        @include media-breakpoint-up(sm){ width: calc(calc(100% - 0rem) / 2); }
+        @include media-breakpoint-up(lg){ width: calc(calc(100% - 0rem) / 3); }
+        @include media-breakpoint-up(xl){ width: calc(calc(100% - 0rem) / 5); }
+    }
+    .card-product {
+        min-height: 37.4rem;
+        max-height: 37.4rem;
+    }
+}
+.product-sidebar {
+    &.grid-four-col {
+        & > .col-product {
+            @include media-breakpoint-up(sm){ width: calc(calc(100% - 0rem) / 2); }
+            @include media-breakpoint-up(lg){ width: calc(calc(100% - 0rem) / 3); }
+        }
+    }
+    &.grid-five-col {
+        & > .col-product {
+            @include media-breakpoint-up(sm){ width: calc(calc(100% - 0rem) / 2); }
+            @include media-breakpoint-up(lg){ width: calc(calc(100% - 0rem) / 4); }
+        }
+        .card-product {
+            min-height: 37.4rem;
+            max-height: 37.4rem;
+        }
+    }
+}
+
+.grid-three-row,
+.grid-two-row {
+    & > .col-product {
+        width: calc(calc(100% - 0rem) / 1);
+        @include media-breakpoint-up(sm){ width: calc(calc(100% - 0rem) / 1); }
+    }
 }

@@ -1,0 +1,153 @@
+// mega-menu css
+.mega-menu-container {
+    --mega-menu-side-bg: #FCFCFC;
+    --mega-menu-side-width: 342px;
+    --mega-coming-soon-bg: #F1F1F4;
+    width: 100%;
+    max-width: calc(100% - var(--#{$prefix}gutter-x));
+    margin-left: calc(calc(var(--#{$prefix}gutter-x)) / 2);
+    margin-top: 1.25rem;
+    // opacity: 0;
+    // visibility: hidden;
+    transform-origin: top center;
+    transform: scaleY(0) translateZ(100px);
+    will-change: transform;
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+
+    @media (max-width: 1500px) {
+        --mega-menu-side-width: 310px;
+    }
+}
+.mega-menu-nav {
+    background-color: var(--mega-menu-side-bg);
+    // height: 358px;
+    height: 410px;
+}
+
+.mega-menu {
+    width: var(--mega-menu-side-width);
+    min-width: var(--mega-menu-side-width);
+    background-color: var(--mega-menu-side-bg);
+    margin: 0;
+    height: 100%;
+}
+
+.mega-menu {
+    & > li {
+        font-weight: 400;
+        & > .mega-col-wrap {
+            opacity: 1;
+            visibility: visible;
+            position: absolute;
+            list-style: none;
+            top: 0px;
+            left: calc(calc(var(--mega-menu-side-width) + 1px));
+            width: calc(calc(100% - var(--mega-menu-side-width)));
+            min-height: 100%;
+            z-index: 1;
+            overflow: hidden;
+            transform: translateX(0);
+            will-change: transform;
+            background-color: var(--#{$prefix}body-bg);
+        }
+        &.active-item,
+        &:hover {
+            .mega-col-wrap {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(0);
+            }
+            & > a {
+                text-decoration: none;
+                background-color: var(--#{$prefix}body-bg);
+                border-color: var(--#{$prefix}border-color);
+                color: var(--#{$prefix}body-color);
+                text-shadow: 0px 0px 0px var(--#{$prefix}body-color);
+            }
+
+            .normal-icon { display: none; }
+            .hover-icon { display: block; }
+        }
+        & > a {
+            text-decoration: none;
+            padding: 1.2rem 1rem;
+            border: 1px solid transparent;
+            position: relative;
+            color: var(--#{$prefix}secondary);
+            &::after {
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 100%;
+                top: 0;
+                right: -36px;
+                left: initial;
+                z-index: 0;
+                background-color: transparent;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+.active-item {
+    .normal-icon { display: none; }
+    .hover-icon { display: block; }
+}
+.mega-menu-list { display: block; }
+.mega-menu-icon {
+    width: 15px;
+    min-width: 15px;
+}
+.hover-icon { display: none; }
+.coming-soon {
+    font-size: 12px;
+    background-color: var(--mega-coming-soon-bg);
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.6rem;
+    display: block;
+    color: #4B5675;
+}
+
+/* mega-col-wrap width dropdown */
+.mega-col-wrap {
+    --mega-col-gap: 10px;
+    gap: var(--mega-col-gap);
+    .mega-col {
+        width: calc(calc(100% - calc(var(--mega-col-gap) * 4)) / 5);
+        @media (max-width: 1500px) {
+            width: calc(calc(100% - calc(var(--mega-col-gap) * 2)) / 3);
+        }
+        ul {
+            li {
+                font-weight: 400;
+                list-style: none;
+                &.active-item {
+                    a {
+                        background-color: var(--bg-color3, #F9F9F9);
+                        color: var(--#{$prefix}body-color);
+                        text-shadow: 0px 0px 0px var(--#{$prefix}body-color);
+                    }
+                }
+                a {
+                    display: flex;
+                    background-color: var(--#{$prefix}body-bg);
+                    color: var(--#{$prefix}secondary);
+                    padding: 0.8rem 1rem;
+                    &:is(:hover, :active) {
+                        background-color: var(--bg-color3, #F9F9F9);
+                        color: var(--#{$prefix}body-color);
+                        text-shadow: 0px 0px 0px var(--#{$prefix}body-color);
+                    }
+                    &::after { content: none; }
+                }
+            }
+        }
+    }
+}
+
+.mega-menu>li>ul li ul,
+.mega-menu li>ul li,
+.mega-col-wrap,
+.mega-menu>li>ul,
+.mega-menu>li { transition: all 0.3s ease-in-out; }

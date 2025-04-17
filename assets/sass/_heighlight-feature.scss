@@ -1,0 +1,81 @@
+// heighlight-feature css
+.highlighted-heading { margin-bottom: -1rem; }
+.heighlight-content-wrap {
+    --col-item-gap: 1.5rem;
+    @include media-breakpoint-down(md) { --col-item-gap: 1rem; }
+    gap: var(--col-item-gap);
+}
+.heighlight-slider-wrapper {
+    --col-item-gap: 2.1rem;
+    @include media-breakpoint-down(md) { --col-item-gap: 1rem; }
+    flex-wrap: wrap;
+    gap: var(--col-item-gap);
+    .swiper-slide {
+        width: fit-content;
+        height: auto;
+        @include media-breakpoint-down(xl) { width: calc(calc(100% - calc(var(--col-item-gap)* 1)) / 2); }
+    }
+}
+.heighlight-item { width: 100%; }
+
+.heighlight-icon {
+    min-width: var(--heighlight-size);
+    width: var(--heighlight-size);
+}
+.feature-content {
+    width: calc(calc(100% - 24px) / 1);
+    padding-left: 1.5rem;
+    @include media-breakpoint-down(md) { padding-left: 1.1rem; }
+}
+
+// quick-add-product-wrap slider css
+.quick-add-product-wrap { padding-left: 1px; padding-right: 1px;}
+.quick-add-product-img {
+    width: 9rem;
+    min-width: 9rem;
+    height: 9rem;
+    @include media-breakpoint-down(lg){
+        width: 7rem;
+        min-width: 7rem;
+        height: 7rem;
+    }
+}
+.quick-add-btn-wrap {
+    --swiper-btn-size: 30px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    top: -1.5rem;
+}
+
+.video-wrapper {
+    --video-height: 69rem;
+    width: 100%;
+    height: var(--video-height);
+    overflow: hidden;
+    @include media-breakpoint-down(md) { --video-height: 45rem; }
+}
+.video-size {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 1;
+}
+.video-control {
+    bottom: 20px;
+    right: 20px;
+}
+.btn-video-control {
+    --video-control-size: 40px;
+    background: var(--#{$prefix}primary);
+    width: var(--video-control-size);
+    height: var(--video-control-size);
+}
+.btn-mute {
+    &.active {
+        .mute { display: none; }
+        .unmute { display: block; }
+    }
+    .unmute { display: none; }
+}
+.btn-play { display: none; }

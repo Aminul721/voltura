@@ -1,0 +1,17 @@
+// our-progress css
+.our-progress-wrap {
+    padding-top: 51rem;
+    @include media-breakpoint-down(xl) { padding-top: 36rem; }
+    @include media-breakpoint-down(lg) { padding-top: 24rem; }
+    @include media-breakpoint-down(md) { padding-top: 14rem; }
+}
+.our-progress-bg {
+    --voltura-bg: url('../images/backgrounds/dark-blue-bg.jpg');
+    --voltura-repeat: no-repeat;
+    --voltura-size: cover;
+    --voltura-position: center bottom;
+    --voltura-opacity: initial;
+}
+.our-progress-title {
+    border-color: rgba(var(--#{$prefix}border-color-rgb), 0.3);
+}

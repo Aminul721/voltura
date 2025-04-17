@@ -1,5 +1,18 @@
 // special-feature-section css
-.full-width-slider { margin-right: calc(-1 * var(--margin-right));}
+.full-width-slider { 
+    .swiper-wrapper {
+        @include media-breakpoint-up(xl) {
+            transform: translate3d(var(--offsetBeforeSpace),0,0); 
+        }
+    }
+}
+.offset-before {
+    .swiper-wrapper {
+        @include media-breakpoint-up(xl) {
+            transform: translate3d(var(--offsetBeforeSpace),0,0) !important; 
+        }
+    }
+}
 .special-feature-slider {
     --swiper-btn-size: 56px;
     padding-bottom: calc(var(--swiper-btn-size) + 40px);
@@ -7,6 +20,7 @@
         --swiper-btn-size: 42px;
         padding-bottom: calc(var(--swiper-btn-size) + 25px);
     }
+    .swiper-slide { height: auto; }
 }
 .special-feature-title {
     @include media-breakpoint-up(lg) { max-width: 72rem; }
@@ -27,7 +41,6 @@
     --swiper-btn-bg: #E0E4E9;
     --swiper-btn-color:#65717E;
     --fa-secondary-opacity: 1;
-    margin-right: calc(var(--margin-right));
     padding-right: 15px;
     @include media-breakpoint-down(lg) {
         --swiper-btn-size: 46px;

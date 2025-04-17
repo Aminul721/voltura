@@ -1,0 +1,49 @@
+// pagination css
+.show-per-page-wrapper {
+    --#{$prefix}form-input-padding-y: 0.01rem;
+    --#{$prefix}form-input-padding-x: 1rem;
+    --#{$prefix}input-font-size: 1.8rem;
+}
+.show-page-select {
+    color: rgba(var(--#{$prefix}body-color-rgb), 1);
+    width: 64px;
+    &:is(:focus, :active) { border-color: var(--#{$prefix}border-color);}
+}
+.show-page-select option { cursor: pointer; }
+.pagination-custom {
+    --#{$prefix}pagination-size: 30px;
+    --#{$prefix}pagination-padding-x: 0.2rem;
+    --#{$prefix}pagination-padding-y: 0.2rem;
+    --#{$prefix}pagination-color: #65717E;
+    --#{$prefix}pagination-border-width: 0;
+    --#{$prefix}pagination-border-color: transparent;
+    --#{$prefix}pagination-border-radius: 0.6rem;
+    --#{$prefix}pagination-hover-color: var(--#{$prefix}body-color);
+    --#{$prefix}pagination-hover-bg: #F1F1F4;
+    --#{$prefix}pagination-hover-border-color: transparent;
+    --#{$prefix}pagination-focus-color: var(--#{$prefix}body-color);
+    --#{$prefix}pagination-focus-bg: #F1F1F4;
+    --#{$prefix}pagination-focus-box-shadow: none;
+    --#{$prefix}pagination-active-color: var(--#{$prefix}body-color);
+    --#{$prefix}pagination-active-bg: #F1F1F4;
+    --#{$prefix}pagination-active-border-color: transparent;
+    .page-item:not(:first-child) .page-link {
+        margin-left: calc(var(--bs-border-width) * 2);
+    }
+    .page-item {
+        &.active {
+            .page-link { text-shadow: 0px 0px 0px var(--#{$prefix}body-color); }
+        }
+    }
+    .page-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--#{$prefix}pagination-size);
+        height: var(--#{$prefix}pagination-size);
+        border-radius: var(--#{$prefix}pagination-border-radius);
+        &:hover { text-shadow: 0px 0px 0px var(--#{$prefix}body-color); }
+    }
+
+    @include media-breakpoint-down(md) { --#{$prefix}pagination-padding-x: 0.8rem;}
+}

@@ -78,6 +78,29 @@
 }
 
 .btn-secondary {
+    --#{$prefix}btn-bg: #E0E4E9;
+    --#{$prefix}btn-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-border-color: #E0E4E9;
+    --#{$prefix}btn-hover-bg: #fff;
+    --#{$prefix}btn-active-bg: #fff;
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);
+}
+
+.btn-outline-secondary {
+    --#{$prefix}btn-bg: transparent;
+    --#{$prefix}btn-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-border-color: var(--#{$prefix}body-color);
+    --#{$prefix}btn-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-hover-bg: transparent;
+    --#{$prefix}btn-active-bg: transparent;
+    --#{$prefix}btn-hover-border-color: var(--#{$prefix}primary);
+    --#{$prefix}btn-active-border-color: var(--#{$prefix}primary);
+}
+.btn-dark {
     --#{$prefix}btn-bg: var(--#{$prefix}body-color);
     --#{$prefix}btn-color: var(--#{$prefix}white);
     --#{$prefix}btn-border-color: var(--#{$prefix}body-color);
@@ -86,8 +109,7 @@
     --#{$prefix}btn-hover-border-color: #07080a;
     --#{$prefix}btn-active-border-color: #07080a;
 }
-
-.btn-outline-secondary {
+.btn-outline-dark {
     --#{$prefix}btn-bg: transparent;
     --#{$prefix}btn-color: var(--#{$prefix}body-color);
     --#{$prefix}btn-border-color: var(--#{$prefix}body-color);

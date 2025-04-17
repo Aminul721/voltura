@@ -1,5 +1,5 @@
-[data-bs-theme="light"],
-:root{
+:root,
+[data-bs-theme="light"] {
     --#{$prefix}body-color: #2F353D;
     --#{$prefix}body-color-rgb: 47, 53, 61;
     --#{$prefix}primary: #1279F2;
@@ -9,6 +9,7 @@
     --#{$prefix}body-bg: #ffffff;
     --#{$prefix}body-bg-rgb: 255, 255, 255;
     --#{$prefix}border-color: #E0E4E9;
+    --#{$prefix}border-color-rgb: 224, 228, 233;
     --#{$prefix}link-color-rgb: var(--#{$prefix}body-color-rgb);
     --#{$prefix}link-color: var(--#{$prefix}body-color);
     --#{$prefix}link-hover-color: var(--#{$prefix}primary);
@@ -44,27 +45,116 @@
     --#{$prefix}border-radius-2xl: 2rem;
     --#{$prefix}border-radius-pill: 3rem;
     --#{$prefix}box-shadow: 0px 8px 40px 0px rgba(1, 22, 36, 0.08);
+    --#{$prefix}box-shadow-sm: 0px 7px 18px 0px rgba(0, 0, 0, 0.09);
+
+}
+[data-bs-theme="dark"] {
+    --#{$prefix}body-color: #2F353D;
+    --#{$prefix}body-color-rgb: 47, 53, 61;
+    --#{$prefix}primary: #1279F2;
+    --#{$prefix}primary-rgb: 18, 121, 242;
+    --#{$prefix}secondary: #65717E;
+    --#{$prefix}secondary-rgb: 101, 113, 126;
+    --#{$prefix}body-bg: #ffffff;
+    --#{$prefix}body-bg-rgb: 255, 255, 255;
+    --#{$prefix}border-color: #E0E4E9;
+    --#{$prefix}border-color-rgb: 224, 228, 233;
+    --#{$prefix}link-color-rgb: var(--#{$prefix}body-color-rgb);
+    --#{$prefix}link-color: var(--#{$prefix}body-color);
+    --#{$prefix}link-hover-color: var(--#{$prefix}primary);
+    --#{$prefix}link-hover-color-rgb: var(--#{$prefix}primary-rgb);
+
+    --#{$prefix}headings-color: var(--#{$prefix}body-color);
+    //----- scss-docs-end headings-variables
+
+    --#{$prefix}light: #fff;
+    --#{$prefix}light-rgb: 255, 255, 255;
+
+    --#{$prefix}blue: #1279F2;
+    --#{$prefix}blue-rgb: 18, 121, 242;
+    --#{$prefix}gray: #B0B5BB;
 }
 
 html {
     font-size: 62.5%;
-    @include media-breakpoint-down(md) { font-size: 52.5%; }
+    @include media-breakpoint-down(md) {
+        font-size: 52.5%;
+        overflow-x: hidden;
+    }
 }
-body{ padding-right: 0 !important; }
+body{ padding-right: 0 !important; overflow-x: hidden; }
 #wrapper {
     width: 100%;
 }
 br { @include media-breakpoint-down(xxl) { display: none; } }
 .container, .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+    --#{$prefix}gutter-x: 2.5rem;
     @include media-breakpoint-up(xl){ --#{$prefix}gutter-x: 6rem; }
     @include media-breakpoint-up(lg){ --#{$prefix}gutter-x: 4rem; }
     @include media-breakpoint-up(sm){ --#{$prefix}gutter-x: 3rem; }
+}
+h1 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 4.8vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 3.65vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1rem + 3.4vw); }
+}
+h2 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 3.5vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 2.88vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1.2rem + 2.5vw); }
+}
+h3 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 3vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 2.8vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1.2rem + 2.3vw); }
+}
+h4 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 2.8vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 2.4vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1.2rem + 2.2vw); }
+}
+h5 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 2.6vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 2.2vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1.2rem + 2.1vw); }
+}
+
+.display-1 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 9.8125vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 8.125vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1rem + 7.85vw); }
+}
+.display-2 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 8.8125vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 7.125vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1rem + 6.85vw); }
+}
+.display-3 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 6.8125vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 5.125vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1rem + 4.85vw); }
+}
+.display-4 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 5.8125vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 4.125vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1rem + 3.85vw); }
+}
+.display-5 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 4.8125vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 3.5vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1rem + 3.2vw); }
+}
+.display-6 {
+    @include media-breakpoint-between(lg, xl) { font-size: calc(1rem + 3.8125vw); }
+    @include media-breakpoint-between(md, lg) { font-size: calc(1rem + 3.2vw); }
+    @include media-breakpoint-down(md) { font-size: calc(1rem + 3vw); }
 }
 
 svg {
     fill: none;
     stroke: currentColor;
 }
+.extra-heading-fm { font-family: "Geist", sans-serif; }
 .lead-fs-22 { font-size: 2.2rem; }
 .extra-fs-16 { font-size: 1.6rem; }
 .extra-small {
@@ -74,6 +164,7 @@ svg {
 .letter-spacing-n1 { letter-spacing: -0.22rem; }
 
 .rounded-2xl { border-radius: 2rem; }
+.rounded-24 { border-radius: 2.4rem; }
 .bg-blue { background-color: var(--#{$prefix}primary); }
 .text-blue { color: var(--#{$prefix}primary); }
 .text-gray { color: var(--#{$prefix}gray); }
@@ -89,6 +180,10 @@ svg {
 .pt-100 { @include media-breakpoint-up(xl) { padding-top: 10rem; } }
 .pb-100 { @include media-breakpoint-up(xl) { padding-bottom: 10rem; } }
 .py-100 { @include media-breakpoint-up(xl) { padding-top: 10rem; padding-bottom: 10rem; } }
+
+.ps-100 { @include media-breakpoint-up(xl) { padding-left: 10rem; } }
+.pe-100 { @include media-breakpoint-up(xl) { padding-right: 10rem; } }
+.px-100 { @include media-breakpoint-up(xl) { padding-left: 10rem; padding-right: 10rem; } }
 
 .pt-120 { @include media-breakpoint-up(xl) { padding-top: 12rem; } }
 .pb-120 { @include media-breakpoint-up(xl) { padding-bottom: 12rem; } }
@@ -131,14 +226,21 @@ svg {
 .light-gray-red { background-color: var(--light-gray-red,#F8ECEC ); }
 
 .bg-light-gray { background-color: var(--bg-color, #F5F5F7) }
+.bg-light-gray2 { background-color: var(--bg-color2, #F4F6F8) }
+.bg-light-gray3 { background-color: var(--bg-color3, #F9F9F9) }
 
 .mx-w255 { max-width: 255px; }
+.mx-w380 { max-width: 380px; }
 .mx-w500 { @include media-breakpoint-up(lg) { max-width: 501px; } }
+.mx-w590 { @include media-breakpoint-up(md) { max-width: 590px; } }
 .mx-w610 { max-width: 610px; }
+.mx-w625 { max-width: 626px; }
+.mx-w640 { max-width: 640px; }
 .mx-w922 { max-width: 922px; }
 .mx-w720 { @include media-breakpoint-up(lg) { max-width: 720px; } }
 .mx-h { @include media-breakpoint-down(lg) {max-height: 32.5rem;} }
 .mx-h-1015 { max-height: 1015px; @include media-breakpoint-down(lg) { max-height: 550px; } }
+.w-fit-content { width: fit-content;}
 
 .currentColor { color: currentColor;}
 .backdrop-blur{ backdrop-filter: blur(25px);}
@@ -187,6 +289,8 @@ svg {
 .fw-800 { font-weight: 800; }
 .fw-200 { font-weight: 200; }
 .cursor-point { cursor: pointer; }
+.border-color2 { border-color: #B0B5BB; }
+.border-color3 { border-color: #65717E; }
 
 .sticky-product-wrap {
     transition: all 0.25s ease-in-out;
@@ -200,7 +304,7 @@ svg {
     }
 }
 .sticky-product-img {
-    --sticky-product-img: 56px;
+    --sticky-product-img: 58px;
     width: var(--sticky-product-img);
     height: var(--sticky-product-img);
 }
@@ -244,6 +348,20 @@ svg {
     background-size: var(--voltura-size);
     background-position: var(--voltura-position);
 }
+.bg-voltura-gradient {
+    --voltura-bg-gradient: linear-gradient(180deg, rgba(0, 15, 41, 0) 39.06%, rgba(0, 15, 41, 0.5) 100%);
+    --voltura-gradient-position: bottom;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: var(--voltura-gradient-position);
+        left: 0;
+        z-index: 0;
+        background: var(--voltura-bg-gradient);
+    }
+}
 
 // svg stroke line animation css
 .feature-icon {
@@ -251,21 +369,17 @@ svg {
     color: var(--svg-icon-color);
 }
 .animation-icon {
-    stroke-width:1;
-    stroke-miterlimit:1;
+    stroke-width: 1;
+    stroke-miterlimit:0;
 }
-.animation-stroke { animation: animate-svg-stroke 5s 0.3s linear forwards; }
-@keyframes animate-svg-stroke {
-    0% {
-        stroke-dasharray: 1200px;
-        stroke-dashoffset: 1200px;
-    }
-    1% {
-        stroke-dashoffset: 1200px;
-    }
+.animation-stroke {
+    stroke-dasharray: 1200px;
+    stroke-dashoffset: 1200px;
+    animation: animateSvgStroke 4s 0.3s linear forwards;
+}
+@keyframes animateSvgStroke {
     100% {
         stroke-dashoffset: 0;
-        stroke-dasharray: 1200px;
     }
 }
 
@@ -297,3 +411,15 @@ canvas {
     left: 0;
 }
 .back-top-icon { color: #fff; }
+
+.view-product-container {
+    display: none;
+    z-index: 991;
+    width: calc(calc(86% - 38px));
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: calc(calc(86% - 38px));
+}
